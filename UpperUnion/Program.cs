@@ -20,7 +20,18 @@ namespace UpperUnion
                     uppercase[i] = args[i].ToUpper();
                 }
                 Array.Sort(uppercase, StringComparer.OrdinalIgnoreCase);
-                
+
+                var builder = new StringBuilder();
+                builder.Append(uppercase[0]);
+
+                for (int i = 1; i < uppercase.Length; i++);
+                {
+                    builder.Append("-");
+                    builder.Append(uppercase[i]);
+
+                }
+
+                Console.Writeline(builder.ToString());
             }
         }
     }
